@@ -11,8 +11,8 @@ namespace Circit.Weather.Api.Controllers
     public class AstronomyController(ILogger<AstronomyController> logger,
         WeatherService weatherService) : ControllerBase
     {
-        [HttpGet("{town}/{date}")]
-        public async Task<ActionResult> Get(string town, DateTime date, CancellationToken cancellationToken)
+        [HttpGet("{town}/{date?}")]
+        public async Task<ActionResult> Get(string town, string? date, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(town))
             {
