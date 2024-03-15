@@ -8,19 +8,19 @@
   
   <mat-card-content class="background-dublin">
     <mat-list>
-      <mat-list-item style="background-color: #fefefe90;"><li>Local time: 2024-03-15 8:54</li></mat-list-item>
+      <mat-list-item style="background-color: #fefefe90;"><li>Local time: {{model.location.localtime}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Temperature: 10°C</li></mat-list-item>
+      <mat-list-item style="background-color: #fefefe90;"><li>Temperature: {{model.current.temp_c}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Wind: 10km/h</li></mat-list-item>
+      <mat-list-item style="background-color: #fefefe90;"><li>Feels like: {{model.current.feelslike_c}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Humidity: 80%</li></mat-list-item>
+      <mat-list-item style="background-color: #fefefe90;"><li>Wind: {{model.current.wind_kph}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Humidity: 80%</li></mat-list-item>
+      <mat-list-item style="background-color: #fefefe90;"><li>Gusts: {{model.current.gust_kph}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Humidity: 80%</li></mat-list-item>
+      <mat-list-item style="background-color: #fefefe90;"><li>Humidity: {{model.current.wind_kph}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Humidity: 80%</li></mat-list-item>
+      <mat-list-item style="background-color: #fefefe90;"><li>Precipitation: {{model.current.precip_mm}}</li></mat-list-item>
     </mat-list>     
   </mat-card-content>
 

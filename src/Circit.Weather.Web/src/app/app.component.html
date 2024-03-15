@@ -19,11 +19,11 @@
       <div style="display: flex; justify-content: center;">
         <mat-button-toggle-group value="Dublin" name="fontStyle" aria-label="Font Style" class="town-options">
           <mat-button-toggle value="Dublin" (click)="openDublin()">Dublin</mat-button-toggle>
-          <mat-button-toggle value="Paris">Paris</mat-button-toggle>
-          <mat-button-toggle value="Madrid">Madrid</mat-button-toggle>
+          <mat-button-toggle value="Paris" (click)="openParis()">Paris</mat-button-toggle>
+          <mat-button-toggle value="Madrid" (click)="openMadrid()">Madrid</mat-button-toggle>
         </mat-button-toggle-group>
       </div>
-      <card-component [town]="'Paris'"></card-component>
+      <card-component [town]="town"></card-component>
     </div>
     </mat-grid-tile>
     </mat-grid-list>

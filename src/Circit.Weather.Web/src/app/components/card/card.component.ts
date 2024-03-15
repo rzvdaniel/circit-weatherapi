@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, Input } from '@angular/core';
+import { Component, ChangeDetectorRef, Input, ChangeDetectionStrategy  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,6 +15,7 @@ import { Subject, takeUntil } from 'rxjs';
 @Component({
   selector: 'card-component',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet, MatToolbarModule, MatIconModule, MatButtonModule, MatCardModule, MatButtonToggleModule, MatGridListModule, MatListModule, MatDividerModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
@@ -22,7 +23,7 @@ import { Subject, takeUntil } from 'rxjs';
 export class CardComponent {
 
   @Input() town: string = "dublin";
-  model: WeatherModel;
+  public model: WeatherModel;
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
   /**
@@ -50,10 +51,9 @@ export class CardComponent {
       });
   }
 
-  /**
-     * Open the shortcuts panel
-     */
-  openDublin(): void {
-    window.open('https://www.google.com/maps/place/Dublin', '_blank');
+  ngOnChanges(changes: any) {
+     // Store the user on the user service
+     this._weatherService.get(this.town).subscribe();
   }
+
 }

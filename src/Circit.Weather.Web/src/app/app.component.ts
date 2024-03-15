@@ -19,12 +19,20 @@ import { CardComponent } from './components/card/card.component';
 })
 export class AppComponent {
   title = 'circit-weather-web';
+  town: string = "Dublin";
 
-  /**
-     * Open the shortcuts panel
-     */
   openDublin(): void
   {
-    window.open('https://www.google.com/maps/place/Dublin', '_blank');
+    this.town = "Dublin";
+  }
+
+  openParis(): void
+  {
+    this.town = "Paris";
+  }
+
+  openMadrid(): void
+  {
+    this.town = "Madrid";
   }
 }
