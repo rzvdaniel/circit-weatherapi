@@ -7,7 +7,6 @@
   }
   
   .example-header-image {
-    background-image: url('https://cdn.weatherapi.com/weather/64x64/day/266.png');
     background-size: cover;
   }
 

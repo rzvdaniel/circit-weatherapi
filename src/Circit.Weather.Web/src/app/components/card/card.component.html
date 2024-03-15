@@ -1,26 +1,26 @@
 
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
+    <div mat-card-avatar class="example-header-image" style="background-image: url('{{weatherAvatar}}')"></div>
     <mat-card-title>Dublin</mat-card-title>
     <mat-card-subtitle>Light drizzle</mat-card-subtitle>
   </mat-card-header>
   
-  <mat-card-content class="background-dublin">
+  <mat-card-content class="{{townBackgroundClass}}">
     <mat-list>
-      <mat-list-item style="background-color: #fefefe90;"><li>Local time: {{model.location.localtime}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Local time: {{model.location.localtime}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Temperature: {{model.current.temp_c}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Temperature: {{model.current.temp_c}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Feels like: {{model.current.feelslike_c}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Feels like: {{model.current.feelslike_c}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Wind: {{model.current.wind_kph}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Wind: {{model.current.wind_kph}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Gusts: {{model.current.gust_kph}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Gusts: {{model.current.gust_kph}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Humidity: {{model.current.wind_kph}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Humidity: {{model.current.wind_kph}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item style="background-color: #fefefe90;"><li>Precipitation: {{model.current.precip_mm}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Precipitation: {{model.current.precip_mm}}</li></mat-list-item>
     </mat-list>     
   </mat-card-content>
 

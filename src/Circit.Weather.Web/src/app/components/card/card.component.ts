@@ -25,10 +25,11 @@ export class CardComponent {
   @Input() town: string = "dublin";
   public model: WeatherModel;
   private _unsubscribeAll: Subject<any> = new Subject<any>();
-
+  public townBackgroundClass : string = "background-dublin";
+  public weatherAvatar:string = "avatar-weather";
   /**
-     * Constructor
-     */
+   * Constructor
+   */
   constructor(private _weatherService: WeatherService, private _changeDetectorRef: ChangeDetectorRef,) {
     this.model = {} as WeatherModel;
   }
@@ -45,15 +46,15 @@ export class CardComponent {
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe((model: WeatherModel) => {
         this.model = model;
-
+        this.weatherAvatar = "https:" + this.model.current.condition.icon;
         // Mark for check
         this._changeDetectorRef.markForCheck();
       });
   }
 
   ngOnChanges(changes: any) {
-     // Store the user on the user service
      this._weatherService.get(this.town).subscribe();
+     this.townBackgroundClass = "background-" + this.town.toLowerCase();
+     this.weatherAvatar = this.model?.current?.condition.icon ? "https:" + this.model?.current?.condition.icon : "";
   }
-
 }
