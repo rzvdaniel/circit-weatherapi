@@ -20,8 +20,10 @@ builder.Services.AddHttpClient<WeatherService>(client =>
 
 var app = builder.Build();
 
-
-// Configure the HTTP request pipeline.
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 app.UseHttpsRedirection();
 
