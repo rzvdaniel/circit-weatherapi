@@ -25,9 +25,9 @@ Not configuration needed in Development. The website is already ready to connect
 ### Build
 Run ``npm start`` into the root website folder at https://github.com/rzvdaniel/circit-weatherapi/tree/main/src/Circit.Weather.Web
 
-### Circit Web application
+### Circit Weather Web
 
 ![Screenshot 01](resources/Screenshot-2024-03-15-141627.png?raw=true "Weather Web")
 
-### Circit Api application
+### Circit Weather Api
 ![Screenshot 01](resources/Screenshot-2024-03-15-174204.png?raw=true "Weather Api")
