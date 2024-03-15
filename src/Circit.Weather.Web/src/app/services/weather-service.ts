@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Inject, Injectable } from '@angular/core';
 import { WeatherModel } from '../models/weather-model';
 import { Observable, ReplaySubject, tap} from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class WeatherService {
@@ -42,7 +43,7 @@ export class WeatherService {
 
     get(town: string): Observable<WeatherModel>
     {
-        return this._httpClient.get<WeatherModel>(`https://localhost:7263/weather/${town}`).pipe(
+        return this._httpClient.get<WeatherModel>(`${environment.apiUri}/weather/${town}`).pipe(
             tap((model:WeatherModel) =>
             {
                 this._model.next(model);
