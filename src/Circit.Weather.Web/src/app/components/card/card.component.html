@@ -2,8 +2,8 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image" style="background-image: url('{{weatherAvatar}}')"></div>
-    <mat-card-title>Dublin</mat-card-title>
-    <mat-card-subtitle>Light drizzle</mat-card-subtitle>
+    <mat-card-title>{{town}}</mat-card-title>
+    <mat-card-subtitle>{{model.current.condition.text}}</mat-card-subtitle>
   </mat-card-header>
   
   <mat-card-content class="{{townBackgroundClass}}">
