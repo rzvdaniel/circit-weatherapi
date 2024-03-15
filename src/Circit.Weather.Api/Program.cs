@@ -10,6 +10,8 @@ var configuration = new ConfigurationBuilder()
 
 builder.Services.AddControllers();
 
+builder.Services.AddSwaggerGen();
+
 builder.Services.AddHttpClient<WeatherService>(client =>
 {
     client.BaseAddress = new Uri(configuration["WeatherApi:BaseUri"]);
@@ -19,6 +21,16 @@ builder.Services.AddHttpClient<WeatherService>(client =>
 });
 
 var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(options =>
+    {
+        options.DisplayOperationId();
+    });
+}
 
 app.UseCors(x => x
     .AllowAnyOrigin()
