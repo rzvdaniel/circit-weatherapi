@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,6 +21,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class CardComponent {
 
+  @Input() town: string = "dublin";
   model: WeatherModel;
   private _unsubscribeAll: Subject<any> = new Subject<any>();
 
@@ -32,13 +33,13 @@ export class CardComponent {
   }
 
   /**
-       * On init
-       */
+   * On init
+   */
   ngOnInit(): void {
     // Store the user on the user service
-    this._weatherService.get().subscribe();
+    this._weatherService.get(this.town).subscribe();
 
-    // Subscribe to user changes
+    // Subscribe to model changes
     this._weatherService.model$
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe((model: WeatherModel) => {

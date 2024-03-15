@@ -40,9 +40,9 @@ export class WeatherService {
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------
 
-    get(): Observable<WeatherModel>
+    get(town: string): Observable<WeatherModel>
     {
-        return this._httpClient.get<WeatherModel>(`https://localhost:7263/weather/dublin`).pipe(
+        return this._httpClient.get<WeatherModel>(`https://localhost:7263/weather/${town}`).pipe(
             tap((model:WeatherModel) =>
             {
                 this._model.next(model);
