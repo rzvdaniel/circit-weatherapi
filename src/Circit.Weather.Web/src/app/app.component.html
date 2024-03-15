@@ -1,0 +1,33 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Circit Weather Api</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="container">
+  <mat-grid-list cols="1" rowHeight="700px">
+    <mat-grid-tile>
+    <div class="paragraph-container">
+      <div style="display: flex; justify-content: center;">
+        <mat-button-toggle-group value="Dublin" name="fontStyle" aria-label="Font Style" class="town-options">
+          <mat-button-toggle value="Dublin" (click)="openDublin()">Dublin</mat-button-toggle>
+          <mat-button-toggle value="Paris">Paris</mat-button-toggle>
+          <mat-button-toggle value="Madrid">Madrid</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <card-component></card-component>
+    </div>
+    </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+
+
