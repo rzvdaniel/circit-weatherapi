@@ -2,21 +2,19 @@
 
 ## Overview
 
-This project demonstrates Rapidapi Weather integration into a Web.Api and Angular application.
-
-It consists of two projects:
+This project demonstrates [Weatherapi](https://www.weatherapi.com/) integration into a **.NET Web.Api** and **Angular website**.
 
 ## 1. Circit.Weather.Api
-The Api connects to Rapidapi -> Weatherapi service to download weather, timezone and astronomy data. 
+The Api connects to [Weatherapi](https://www.weatherapi.com/) service to download weather, timezone and astronomy data. 
 
 ### Tech stack
 .NET 8 Web.Api, C#
 
 ### Configure
-It requires a RapidApiKey which must be added into corresponding configuration in appsettings.json.
+It requires a ``RapidApiKey`` which must be added into corresponding configuration in ``appsettings.json``.
 
 ### Build
-Hit F5 and see it the Api running the Swagger UI. Leave it running because the Web application depends on it.
+Hit F5 and watch the Api running the **Swagger UI** (leave it running because the Web application depends on it).
 
 ## 2. Circit.Weather.Web
 
@@ -26,7 +24,7 @@ The Web application connects to the Api above to retrieve and display weather in
 Angular 17.3.0, Typescript, Material Design
 
 ### Configure
-Not configuration needed in Development. The website is already ready to connect to the Api in evelopment mode.
+Not configuration needed in Development, the website is already ready to connect to the Api (in development mode).
 
 ### Build
 Run ``npm start`` into the root website folder at https://github.com/rzvdaniel/circit-weatherapi/tree/main/src/Circit.Weather.Web
