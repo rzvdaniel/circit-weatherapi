@@ -19,9 +19,9 @@
       <mat-divider></mat-divider>
       <mat-list-item class="list-item"><li>Moon_phase: {{model.astronomy.astro.moon_phase}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item class="list-item"><li>Is moon up: {{model.astronomy.astro.is_moon_up}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Is moon up: {{model.astronomy.astro.is_moon_up == 1 ? "Yes" : "No"}}</li></mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item class="list-item"><li>Is sun up: {{model.astronomy.astro.is_sun_up}}</li></mat-list-item>
+      <mat-list-item class="list-item"><li>Is sun up: {{model.astronomy.astro.is_sun_up == 1 ? "Yes" : "No"}}</li></mat-list-item>
     </mat-list>     
   </mat-card-content>
   
