@@ -13,20 +13,21 @@ import { WeatherModel } from '../../models/weather-model';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
-  selector: 'card-component',
+  selector: 'weather-component',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet, MatToolbarModule, MatIconModule, MatButtonModule, MatCardModule, MatButtonToggleModule, MatGridListModule, MatListModule, MatDividerModule],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  templateUrl: './weather.component.html',
+  styleUrl: './weather.component.css'
 })
-export class CardComponent {
+export class WeatherComponent {
 
   @Input() town: string = "dublin";
   public model: WeatherModel;
   private _unsubscribeAll: Subject<any> = new Subject<any>();
   public townBackgroundClass : string = "background-dublin";
-  public weatherAvatar:string = "avatar-weather";
+  public weatherAvatar : string = "avatar-weather";
+  
   /**
    * Constructor
    */
@@ -38,7 +39,6 @@ export class CardComponent {
    * On init
    */
   ngOnInit(): void {
-    // Store the user on the user service
     this._weatherService.get(this.town).subscribe();
 
     // Subscribe to model changes

@@ -23,7 +23,22 @@
           <mat-button-toggle value="Madrid" (click)="openMadrid()">Madrid</mat-button-toggle>
         </mat-button-toggle-group>
       </div>
-      <card-component [town]="town"></card-component>
+
+      <mat-card class="example-card" [ngSwitch]="details">
+
+      <weather-component [town]="town" *ngSwitchCase="'Weather'"></weather-component>
+      <timezone-component [town]="town" *ngSwitchCase="'Timezone'"></timezone-component>
+      <astronomy-component [town]="town" *ngSwitchCase="'Astronomy'"></astronomy-component>
+
+      <mat-card-actions style="display: flex; justify-content: center;">
+        <mat-button-toggle-group value="Weather" name="fontStyle" aria-label="Font Style" class="town-options">
+          <mat-button-toggle value="Weather" (click)="openWeather()">Weather</mat-button-toggle>
+          <mat-button-toggle value="Timezone" (click)="openTimezone()">Timezone</mat-button-toggle>
+          <mat-button-toggle value="Astronomy" (click)="openAstronomy()">Astronomy</mat-button-toggle>
+        </mat-button-toggle-group>  
+      </mat-card-actions>
+    </mat-card>
+
     </div>
     </mat-grid-tile>
     </mat-grid-list>

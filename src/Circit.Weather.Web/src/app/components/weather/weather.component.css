@@ -1,0 +1,30 @@
+
+  .background-dublin {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url('https://lh5.googleusercontent.com/p/AF1QipPJeurReeI2gomFbQePZP2aQHO05N0tpRENllfh=w408-h544-k-no');
+    background-size: cover;
+  }
+
+  .background-paris {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url('https://lh5.googleusercontent.com/p/AF1QipNbGAUo9Y5b_U88ftlx9EVrgvWym7wuIT7Hbzjh=w426-h240-k-no');
+    background-size: cover;
+  }
+
+  .background-madrid {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url('https://lh5.googleusercontent.com/p/AF1QipPQWJpPn2s6nLTbbsWOKQaj0lEj2GgNNvVzglGf=w408-h408-k-no');
+    background-size: cover;
+  }
+
+  .container {
+    margin: 20px 0 20px 0;
+  }
+
+  .town-options {
+    margin: 20px 0 20px 0;
+  }
+
+  .list-item {
+    background-color: #fefefe90 !important;
+  }

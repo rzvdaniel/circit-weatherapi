@@ -1,0 +1,29 @@
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="schedule" style="padding-top: 10px"></mat-icon>
+    </div>
+    <mat-card-title>{{town}}</mat-card-title>
+    <mat-card-subtitle>{{model.location.country}}</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content class="{{townBackgroundClass}}">
+    <mat-list>
+      <mat-list-item class="list-item"><li>Region: {{model.location.region}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Local time: {{model.location.localtime}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Latitude: {{model.location.lat}} &deg;</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Longitude: {{model.location.lon}} &deg;</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li></li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li></li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li></li></mat-list-item>
+    </mat-list>     
+  </mat-card-content>
+  
+
+
+

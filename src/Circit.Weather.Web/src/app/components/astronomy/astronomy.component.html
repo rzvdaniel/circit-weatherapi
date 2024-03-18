@@ -1,0 +1,30 @@
+
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="public" style="padding-top: 10px"></mat-icon>
+    </div>
+    <mat-card-title>{{town}}</mat-card-title>
+    <mat-card-subtitle>{{model.location.localtime}}</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content class="{{townBackgroundClass}}">
+    <mat-list>
+      <mat-list-item class="list-item"><li>Sunrise: {{model.astronomy.astro.sunrise}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Sunset: {{model.astronomy.astro.sunrise}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Moonrise: {{model.astronomy.astro.moonrise}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Moonset: {{model.astronomy.astro.moonset}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Moon_phase: {{model.astronomy.astro.moon_phase}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Is moon up: {{model.astronomy.astro.is_moon_up}}</li></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item class="list-item"><li>Is sun up: {{model.astronomy.astro.is_sun_up}}</li></mat-list-item>
+    </mat-list>     
+  </mat-card-content>
+  
+
+
+
